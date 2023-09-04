@@ -1,9 +1,23 @@
 # MovieMaster
 
+## Result Update
+
+| Design |
+|-|
+| ![](/media/output.gif) |
+
+- Added the relative transition change of the Movie carousel progress, and the Movie details bottom
+  info progress.
+- Added the relative transition change of the Movie carousel progress, and the Movie rating
+  progress.
+- Tuned some Movie carousel transitions values.
+- Fixed the movie description transition.
+
 ## Features
 
 - Advanced animation examples by only using the `ConstraintLayout` and `MotionLayout` APIs.
-- The nested `MotionLayout`s are decorated as `CustomViews`. It is possible to have multiple `MotionLayout`s on
+- The nested `MotionLayout`s are decorated as `CustomViews`. It is possible to have
+  multiple `MotionLayout`s on
   the same screen and manipulate them in your own manner.
 - The multiple `Carousel`s relations and progress transitions examples.
 - The examples of switching and propagating the progress between the transitions programmatically.
@@ -19,41 +33,27 @@
 - Ability to transition the custom views and their attributes.
 - Staggered animations and their manipulation.
 
-## MotionLayout Disadvantages:
-
-- The advanced animation cases currently hard to achieve, especially with the multitouch.
-- The `Carousel` does not provide a quick solution, it is better to use `ViewPager` or `RecyclerView`.
-- The `MotionLabel` is BUGGY/artifacty inside the transition and does not support the custom fonts.
-- The multitouch support requires a lot of improvements. It is not possible to properly have vertical/horizontal swipe
-  and clicks simultaneously.
-- And again, `Carousel` with the swipe and click, is the functionality we lack.
-- The `NestedScrollView`/nested scroll inside the transition is not working. It is better to use `AppBar`/
-  `CollapsingToolbar`.
-- Sometimes `MotionLayout` draws some artifacts on quick transitions switch.
-- Editor does not invalidate the cache, and it forces reloading Android Studio frequently.
-- The `ConstraintSet`/`Constraint` overrides sometimes does not work properly, so it forces to rewrite the whole
-  `Constraint` from the original state.
-- ~~Lack of functionality to properly set/switch between the transitions. Right now it works the best when you have one
-  scene with one transition.~~
-- It is not possible to extend the MotionLayout as the `CustomView`, because there is not such a method to set the scene
-  programmatically. It forces to wrap the MotionLayout into the `FrameLayout` or other.
-- It still in beta, so it requires the last beta/alpha Android Studio build.
-- ~~Lack of the possibility to chain/reference multiple/nested `MotionLayout`s. For example, if you want to animate the
-  main transition and with it propagate the animation state to the others.~~
-
 ## Summary
 
-The `MotionLayout` is an amazing solution for simple and advanced screen animations. It works well for the single
-transition to the end and back, but when there are multiple transitions the problems could occur. It has the handy
-scene editor under the hood, so it is useful to test transitions inside the Android Studio. The other advantage of the
-`MotionLayout`s is the ability to decouple them into the `CustomView`s. Also, `MotionLayout` supports touch events, like
-click and swipe, but I would not recommend them right now, because it still buggy, especially inside the `Carousel`. The
-following helpers `Carousel` and `MotionLabel` are not worth it for now, because the API is not completed yet and
-they contain some real issues. On the other hand, the `ImageFilterView` and `MotionEffect` do the job properly.
-In my opinion, `MotionLayout` should be used for some stunning screen animations, where no touch events included, for
+The `MotionLayout` is an amazing solution for simple and advanced screen animations. It works well
+for the single
+transition to the end and back, but when there are multiple transitions the problems could occur. It
+has the handy
+scene editor under the hood, so it is useful to test transitions inside the Android Studio. The
+other advantage of the
+`MotionLayout`s is the ability to decouple them into the `CustomView`s. Also, `MotionLayout`
+supports touch events, like
+click and swipe, but I would not recommend them right now, because it still buggy, especially inside
+the `Carousel`. The
+following helpers `Carousel` and `MotionLabel` are not worth it for now, because the API is not
+completed yet and
+they contain some real issues. On the other hand, the `ImageFilterView` and `MotionEffect` do the
+job properly.
+In my opinion, `MotionLayout` should be used for some stunning screen animations, where no touch
+events included, for
 example splash screen, tutorial screen, or dashboard screen.
 
 ## Author:
 
 [AKASH PATEL](https://www.linkedin.com/in/akash-patel-53870588/)  
-[gigamole53@gmail.com](mailto:akash4397@gmail.com)
+[akash4397@gmail.com](mailto:akash4397@gmail.com)
